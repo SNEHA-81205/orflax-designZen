@@ -1,0 +1,665 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  /* Large devices (desktops) */
+  @media (min-width: 1025px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    
+}
+
+.nav-1-bar {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height for carousel */
+    overflow: hidden;
+}
+
+.carousel-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Dimming overlay */
+.carousel-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: 2; /* Above the images */
+}
+
+.carousel-bg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slide 20s infinite; /* Animation for sliding images */
+    transition: opacity 1s ease-in-out;
+}
+
+/* Ensure the first image is visible when the page loads */
+.carousel-bg img:nth-child(1) {
+    opacity: 1;
+    animation-delay: 3s; /* Start immediately */
+}
+
+/* Delay other images */
+.carousel-bg img:nth-child(2) {
+    animation-delay: 7s; /* Start after 7s */
+}
+.carousel-bg img:nth-child(3) {
+    animation-delay: 11s;
+}
+.carousel-bg img:nth-child(4) {
+    animation-delay: 15s;
+}
+.carousel-bg img:nth-child(5) {
+    animation-delay: 19s;
+}
+
+/* Keyframes for smooth sliding transitions */
+@keyframes slide {
+    0%, 25% {
+        opacity: 1; /* Stay visible for 25% of the animation duration */
+    }
+    30%, 100% {
+        opacity: 0; /* Fade out */
+    }
+}
+
+.header-logo {
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute; /* Position it relative to the nav bar */
+    margin-top: 280px; /* Adjust as needed */
+    margin-left: 650px; /* Adjust as needed */
+    text-align: center;
+    z-index: 10; /* Ensure it appears above other elements */
+    color: white; /* Change color to ensure readability */
+}
+
+.header1{
+    padding-top: 15px;
+}
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 40px; /* Logo on the top-left */
+    z-index: 3; /* Ensure it's above the carousel */
+}
+
+.logo img {
+    width: 150px; /* Adjust logo size */
+}
+
+.nav1bar-content {
+    position: absolute;
+    top: 30px; /* Top-right content under logo */
+    right: 20px;
+    z-index: 3; /* Above the overlay */
+    display: flex;
+    gap: 20px; /* Space between items */
+    color: rgb(255, 255, 255); /* Text color */
+    align-items: center;
+}
+
+.nav1bar-content h4 {
+    margin: 0; /* Remove default margin */
+}
+
+.nav1bar-content a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the text color from nav1bar-content */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav1bar-content a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Optional: Change color on hover */
+}
+
+
+.nav1bar-content h4 {
+    cursor: pointer;
+    margin: 0;
+}
+
+.call-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0008;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.call-button:hover {
+    background-color: #ff0000;
+}
+
+
+/* About Us Section */
+#about {
+    background-color: #f7f7f7; /* Light background */
+    padding: 50px 20px; /* Padding around the section */
+    text-align: center; /* Center the content */
+    display: block; /* Ensure it's visible */
+    visibility: visible;
+    position: relative;
+}
+
+
+
+#about h2 {
+    font-size: 2rem; /* Heading font size */
+    font-weight: bold;
+    color: #333; /* Dark heading color */
+    margin-bottom: 10px;
+}
+
+/* Nav bar with borders and bookmark icon */
+.nav2bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between elements */
+    margin-bottom: 20px;
+}
+
+.nav2bar .border {
+    width: 50px;
+    height: 3px;
+    background-color: #e74c3c; /* Red color for the line */
+}
+
+.nav2bar i {
+    font-size: 1.5rem; /* Icon size */
+    color: #e74c3c; /* Red color for the icon */
+}
+
+/* Spacing between the border and text */
+.gapping {
+    margin-bottom: 20px;
+}
+
+/* About text styling */
+.about-section {
+
+    margin: 0 auto; /* Center the content */
+}
+
+.about-section h6 {
+    font-size: 1.5rem; /* Paragraph font size */
+    color: #666; /* Lighter color for the text */
+    line-height: 1.8; /* Increase line height for better readability */
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column; /* or row depending on your layout */
+    align-items: center;    /* Center align */
+    text-align: center;     /* Center text */
+}
+
+/* Additional styles for about-section as needed */
+
+
+
+.helper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.helper h6{
+    font-size: 1.8rem;
+}
+
+.helper button{
+    background-color: #ff0000;
+    height: 50px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #fff;
+
+}
+/* Footer Section */
+footer {
+    margin-top: 40px;
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 280px;
+}
+
+.footer-section h2 {
+    color: #1474c8;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #7dbdc3;
+}
+
+.footer-section .contact p {
+    margin-bottom: 8px;
+}
+
+.footer-section .contact p i {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #bbb;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Social Network Styling */
+.connection {
+    text-align: center;
+}
+
+.social-network {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-network i {
+    font-size: 24px;
+    color: #7dbdc3;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.social-network i:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+}
+
+#contact {
+    display:none;
+    padding: 2.5rem; /* Padding for the contact section */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd; /* Optional border */
+    margin: 20px 0; /* Space above and below the section */
+}
+
+.nav-3-bar {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.nav-3-bar h2 {
+    font-size: 24px; /* Title size */
+    color: #333; /* Darker color for better readability */
+}
+
+.contact-content {
+    font-size: 1.5rem;
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+
+}
+
+.contacts {
+    display: flex; /* Flexbox for icons and text */
+    align-items: center; /* Center items vertically */
+    margin-left: 580px;
+    margin-bottom: 15px; /* Space between contact entries */
+    color: #555; /* Darker gray for text */
+}
+
+.contacts i {
+    font-size: 1.5rem; /* Size for the icons */
+    margin-right: 10px; /* Space between icon and text */
+    color: #007bff; /* Color for the icons */
+}
+
+.contacts h6 {
+    margin: 0; /* Remove default margin */
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+/* Container for the cards */
+.why-choose-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+
+}
+
+/* Individual cards for each feature */
+.why-choose-us-card {
+    flex: 1 1 calc(33.333% - 40px); /* Adjust width for 3 cards per row */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.why-choose-us-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.why-choose-us-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 1024px) {
+    .why-choose-us-card {
+        flex: 1 1 calc(50% - 40px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-us-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-choose-us-card {
+        flex: 1 1 100%; /* 1 card per row on mobile */
+        margin-bottom: 20px;
+    }
+}
+
+/* Our Products Section */
+.our-products {
+    background-color: #f7f7f7;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.our-products h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Cards container */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Product card wrapper */
+.product-card {
+    text-align: center;
+}
+
+/* Individual card */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Product name directly below each image */
+.product-card h4 {
+    font-size: 1.1rem;
+    color: #002060;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Explore more button */
+.button {
+    margin-top: 20px;
+    text-decoration: none;
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #c0392b;
+}
+/* Main container with background image */
+.stats {
+    position: relative;
+    width: 100%;
+    height: 372px; /* Fixed height */
+    background: url('bgstat.png') no-repeat center center;
+    background-size: cover; /* Ensure image covers the container */
+    overflow: hidden;
+}
+
+/* Optional: Light darkening effect to enhance text visibility */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Darken overlay for more contrast */
+    z-index: 1;
+}
+
+/* Container for text on the background */
+.text-over-image {
+    position: absolute;
+    top: 60px; /* Top-right content under logo */
+    left: 120px;
+    z-index: 3; /* Above the overlay */
+    display: flex;
+    gap: 20px; /* Space between items */
+    color: rgb(255, 255, 255); /* Text color */
+    align-items: center;
+    text-align: center;
+}
+
+/* Individual content blocks */
+.text-over-image .img-logo {
+    width: 18%;
+    padding: 10px;
+    text-align: center;
+    color: white
+}
+
+/* Ensure the images fit inside each block */
+.text-over-image img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Styling for numbers */
+.text-over-image .data {
+    font-size: 48px;
+    margin: 10px 0;
+    color: white; /* Use a contrasting color for numbers */
+}
+
+/* Text below the numbers */
+.text-over-image h4 {
+    font-size: 16px;
+    color: white; /* Test with a visible color */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .text-over-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-over-image .img-logo {
+        width: 90%; /* Stack on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+.directors-message {
+    height: 370px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Ensure the image and text are spaced out */
+    align-items: center; /* Vertically align items to the center */
+
+}
+
+.directors{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-top: 50px;
+}
+
+.directors-message img {
+    margin-top: 80px;
+
+}
+
+.directors-message h4 {
+    width: 80%; /* Control the width of the text for better formatting */
+    text-align: left; /* Align the text to the left */
+    margin: 0; /* Remove default margins */
+    font-size: 1.5rem; /* Adjust font size */
+    line-height: 1.5; /* Improve line spacing */
+    color:#4f4f4f;
+}
+
+.our-products cards1{
+    display: flex;
+
+}
+
+.product-card{
+    display: inline;
+}

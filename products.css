@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  /* Large devices (desktops) */
+  @media (min-width: 1025px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3e3e3;
+
+}
+
+/* Ensure the container has relative positioning */
+.nav-1-bar {
+    position: relative;
+    width: 100%;
+}
+
+/* Styling for the background image */
+.prod-bg img {
+    width: 100%;
+    display: block;
+    /* Optional: height can be fixed based on your design */
+}
+
+.nav1bar-content a {
+    color: white; /* Set link color (black) */
+    text-decoration: none; /* Remove the underline */
+    font-size: 1.2rem; /* Set the font size */
+    font-weight: bold; /* Optional: Make text bold */
+    padding: 10px;
+}
+
+
+/* Positioning for nav1bar-content on the image */
+.nav1bar-content {
+    text-decoration: none;
+    font-size: 1rem;
+    position: absolute;
+    top: 30px; /* Top-right content under logo */
+    right: 20px;
+    z-index: 3; /* Above the overlay */
+    display: flex;
+    gap: 20px; /* Space between items */
+    color: rgb(255, 255, 255); /* Text color */
+    align-items: center;
+}
+
+/* Styling for the header logo */
+.header-logo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 20px; /* Adjust to move it closer or further from the top */
+    left: 20px; /* Align it to the top left corner */
+    z-index: 2;
+    color: white; /* Make sure the text is readable over the image */
+}
+
+/* General link styling for nav1bar-content */
+.nav1bar-content h4 a {
+    text-decoration: none;
+    color: white; /* White text for better readability on the image */
+    font-weight: bold;
+}
+
+.call-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.call-button:hover {
+    background-color: #0056b3;
+}
+
+
+h1 {
+    font-size: 2.5rem; /* Adjust size */
+    margin: 0;
+}
+
+.header1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Optional: If you want to add a semi-transparent overlay to darken the background image */
+.nav-1-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place it under content but over the image */
+}
+
+.wires{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 0; /* Ensure there's no extra margin below */
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.our-products {
+    text-align: center;
+}
+
+.cards1, .cards2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.our-products {
+    text-align: center;
+}
+
+.cards1, .cards2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100%;
+    height: 220px;
+    border-radius: 4px;
+}
+
+h4 {
+    margin-top: 20px; /* Added more margin to create a gap */
+    font-size: 1.4em;
+    color: #333;
+}
+
+.cables {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.product-card a{
+    text-decoration: none;
+}
+
+.product-card3 a{
+    text-decoration: none;
+}
+
+.product-card4 a{
+    text-decoration: none;
+}
+
+.our-products2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cards3, .cards4 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.product-card3, .product-card4 {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card3:hover, .product-card4:hover {
+    transform: scale(1.05);
+}
+
+.card3 img, .card4 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+h4 {
+    margin-top: 15px; /* Adding space between the image and the title */
+    font-size: 1.2em;
+    color: #333;
+}
+
+.helper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.helper h6{
+    font-size: 1.8rem;
+}
+
+.helper button{
+    background-color: #ff0000;
+    height: 50px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #fff;
+
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 280px;
+}
+
+.footer-section h2 {
+    color: #1474c8;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #7dbdc3;
+}
+
+.footer-section .contact p {
+    margin-bottom: 8px;
+}
+
+.footer-section .contact p i {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #bbb;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.connection {
+    text-align: center;
+}
+
+.social-network {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-network i {
+    font-size: 24px;
+    color: #7dbdc3;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.social-network i:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+}
+
+.table {
+    display: none; /* Initially hide all tables */
+    width: 100%; /* Ensure tables take the full width */
+    margin-top: 20px;
+}
+
+.table img {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+#contact {
+    display:none;
+    padding: 2.5rem; /* Padding for the contact section */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd; /* Optional border */
+    margin: 20px 0; /* Space above and below the section */
+}
+
+.download {
+    height: 340px;
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.catalog {
+    width: 500px;
+    padding-top: 60px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+    gap: 40px;
+    color: white;
+}
+
+.catalog h4{
+    font-size:1.5rem;
+    color: whitesmoke;
+}
+
+/* Style the link as a button */
+.download-btn {
+    font-size: 1.2rem;
+    background-color: red;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.download-btn:hover {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    text-decoration: none; /* Ensure no underline on hover */
+}
